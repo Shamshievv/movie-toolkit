@@ -7,7 +7,7 @@ export const getPopular = () => {
     return async (dispatch:AppDispatch) => {
        try {
            dispatch(fetchingMovie())
-           const responsive = await axios(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=7&sort_by=vote_average.desc&without_genres=99,10755&vote_count.gte=200&api_key=${API_KEY}`)
+           const responsive = await axios(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=4&sort_by=vote_average.desc&without_genres=99,10755&vote_count.gte=200&api_key=${API_KEY}`)
            dispatch(fetchingSuccess(responsive.data.results))
        }
        catch (e:any){
