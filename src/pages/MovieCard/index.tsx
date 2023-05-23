@@ -27,9 +27,9 @@ export default function MovieCard({el}:ICard) {
     return (
        <div>
            {loader &&  <Stack spacing={1}>
-                For variant="text", adjust the height via font-size
+                Загрузка
                <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
-                For other variants, adjust the size with `width` and `height`
+               Загрузка
                <Skeleton variant="circular" width={40} height={40} />
                <Skeleton variant="rectangular" width={210} height={60} />
                <Skeleton variant="rounded" width={210} height={60} />
@@ -48,21 +48,25 @@ export default function MovieCard({el}:ICard) {
                            {el.title}
                        </Typography>
                        <Typography variant="body2" color="text.secondary">
-                           {el.overview.slice(0,active)}
+
+
+                           {
+                               el.overview.length === 0 ? "Нету данных" : el.overview.slice(0,active)
+                           }
+
                            {
                                active === 100   ? <p style={{cursor:"cell"}} onClick={handleClick}>Читать дальше </p>
                                    : <p style={{cursor:"ew-resize"}} onClick={handleClick}>Закрыть</p>
                            }
-
 
                        </Typography>
                    </CardContent>
                </CardActionArea>
            </Card>
            {loader &&  <Stack spacing={1}>
-               For variant="text", adjust the height via font-size
+            Загрузка
                <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
-               For other variants, adjust the size with `width` and `height`
+               Загрузка
                <Skeleton variant="circular" width={40} height={40} />
                <Skeleton variant="rectangular" width={210} height={60} />
                <Skeleton variant="rounded" width={210} height={60} />

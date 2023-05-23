@@ -9,7 +9,7 @@ import TopRated from "./pages/TopRated";
 
 function App() {
   return (
-    <div className="App">
+    <div>
      <Header/>
         <Routes>
             <Route path="/popular" element={<Popular/>}/>
