@@ -14,7 +14,7 @@ const Popular = () => {
     console.log(movie)
     return (
        <div style={{
-           padding:"8% 0"
+           padding:"9% 0"
        }}>
            <div className="container">
                <div style={{

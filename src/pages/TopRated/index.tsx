@@ -30,7 +30,7 @@ const TopRated = () => {
     console.log(movie)
     return (
         <div style={{
-            padding:"8% 0"
+            padding:"9% 0"
         }}>
 
             {loader &&  <Stack spacing={1}>
