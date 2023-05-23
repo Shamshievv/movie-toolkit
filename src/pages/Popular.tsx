@@ -13,21 +13,25 @@ const Popular = () => {
     },[])
     console.log(movie)
     return (
-        <div className="container">
-            <div style={{
-                display:"flex",
-                alignItems:"center",
-                justifyContent:"space-between",
-                flexWrap:"wrap"
-            }} className="flex flex-wrap">
-                {
-                    movie.map((el) => <MovieCard el={el}/>)
+       <div style={{
+           padding:"8% 0"
+       }}>
+           <div className="container">
+               <div style={{
+                   display:"flex",
+                   alignItems:"center",
+                   justifyContent:"space-between",
+                   flexWrap:"wrap"
+               }} className="flex flex-wrap">
+                   {
+                       movie.map((el) => <MovieCard el={el}/>)
 
-                }
+                   }
 
-            </div>
-            <Page/>
-        </div>
+               </div>
+               <Page/>
+           </div>
+       </div>
     );
 };
 

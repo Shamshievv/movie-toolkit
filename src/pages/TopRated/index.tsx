@@ -29,7 +29,9 @@ const TopRated = () => {
     },[page])
     console.log(movie)
     return (
-        <div>
+        <div style={{
+            padding:"8% 0"
+        }}>
 
             {loader &&  <Stack spacing={1}>
                 Загрузка
