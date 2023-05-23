@@ -23,7 +23,7 @@ const Header = () => {
                     <NavLink style={{
                         color:"white",textDecoration:"none",
                         fontSize:"20px",
-                        margin:"2.3% 20px"
+                        margin:"2.5% 20px"
 
                     }} to={"/popular"}>
                         Popular
@@ -31,7 +31,7 @@ const Header = () => {
                     <NavLink style={{
                         color:"white",textDecoration:"none",
                         fontSize:"20px",
-                        margin:"2.3% 20px"
+                        margin:"2.5% 20px"
 
                     }} to={"/topRated"}>
                         TopRated
