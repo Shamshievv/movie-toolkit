@@ -3,12 +3,13 @@ import {useAppSelector} from "../Hooks/useAppSelector";
 import {useAppDispatch} from "../Hooks/useAppDispatch";
 import {getPopular} from "../store/Reducers/ActionCreators";
 import MovieCard from "./MovieCard";
+import Page from "./nextPage/page";
 
 const Popular = () => {
     const {movie,loader,error} = useAppSelector(state => state.movieSlice)
     const dispatch = useAppDispatch()
     useEffect(()=>{
-        dispatch(getPopular())
+        dispatch(getPopular(1))
     },[])
     console.log(movie)
     return (
@@ -21,8 +22,11 @@ const Popular = () => {
             }} className="flex flex-wrap">
                 {
                     movie.map((el) => <MovieCard el={el}/>)
+
                 }
+
             </div>
+            <Page/>
         </div>
     );
 };

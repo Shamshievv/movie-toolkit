@@ -23,9 +23,10 @@ const TopRated = () => {
     }
     const {movie,loader,error} = useAppSelector(state => state.movieSlice)
     const dispatch = useAppDispatch()
+    const [page,setPage] = useState(1)
     useEffect(() => {
-        dispatch(getTopRated())
-    },[])
+        dispatch(getTopRated(page))
+    },[page])
     console.log(movie)
     return (
         <div>
@@ -88,6 +89,34 @@ const TopRated = () => {
                   }
               </div>
           </div>
+            <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
+                <button style={{
+                    width:"100px",
+                    height:"30px",
+                    background:"black",
+                    border:"none",
+                    cursor:"pointer",
+                    margin:"0 20px",
+                    color:"wheat",
+                    fontSize:"20px",
+                    display:"flex",
+                    alignItems:"center",
+                    justifyContent:"center"
+                }} onClick={() => setPage(page + 1)}>+</button>
+                <button  style={{
+                    width:"100px",
+                    height:"30px",
+                    background:"black",
+                    border:"none",
+                    cursor:"pointer",
+                    margin:"0 20px",
+                    color:"wheat",
+                    fontSize:"20px",
+                    display:"flex",
+                    alignItems:"center",
+                    justifyContent:"center"
+                }} onClick={() => setPage(page - 1)}>-</button>
+            </div>
         </div>
     );
 };

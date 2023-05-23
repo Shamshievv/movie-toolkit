@@ -9,10 +9,12 @@ import {useAppSelector} from "../../Hooks/useAppSelector";
 import * as React from 'react';
 import Skeleton from '@mui/material/Skeleton';
 import Stack from '@mui/material/Stack';
+import Page from "../nextPage/page";
 interface ICard {
   el:IMovie
 }
 export default function MovieCard({el}:ICard) {
+    const [page,setPage] = useState(1)
     const {movie,loader,error} = useAppSelector(state => state.movieSlice)
     const [active,setActive] = useState(100)
     function handleClick () {
@@ -33,8 +35,7 @@ export default function MovieCard({el}:ICard) {
                <Skeleton variant="circular" width={40} height={40} />
                <Skeleton variant="rectangular" width={210} height={60} />
                <Skeleton variant="rounded" width={210} height={60} />
-           </Stack>
-           }
+           </Stack>}
            <Card style={{margin:"20px 0"}} sx={{ maxWidth: 345 }}>
                <CardActionArea>
                    <CardMedia
@@ -70,8 +71,8 @@ export default function MovieCard({el}:ICard) {
                <Skeleton variant="circular" width={40} height={40} />
                <Skeleton variant="rectangular" width={210} height={60} />
                <Skeleton variant="rounded" width={210} height={60} />
-           </Stack>
-           }
+           </Stack>}
+
        </div>
     );
 }
