@@ -21,12 +21,21 @@ const TopRated = () => {
             setActive(100)
         }
     }
+
     const {movie,loader,error} = useAppSelector(state => state.movieSlice)
     const dispatch = useAppDispatch()
     const [page,setPage] = useState(1)
     useEffect(() => {
         dispatch(getTopRated(page))
+        setPage(page)
+        pages()
     },[page])
+    function pages(){
+        if (page === 0){
+            return setPage(1)
+        }
+    }
+    pages()
     // console.log(movie)
     return (
         <div>

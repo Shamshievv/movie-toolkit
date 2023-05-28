@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import {useAppSelector} from "../../Hooks/useAppSelector";
 import {useAppDispatch} from "../../Hooks/useAppDispatch";
 import {getPopular} from "../../store/Reducers/ActionCreators";
-
 const Page = () => {
     const [page,setPage] = useState(1)
     const {movie,loader,error} = useAppSelector(state => state.movieSlice)
@@ -11,7 +10,15 @@ const Page = () => {
     useEffect(()=>{
         dispatch(getPopular(page))
         setPage(page)
+        pages()
     },[page])
+   function pages(){
+       if (page === 0){
+           return  setPage(1)
+       }
+
+   }
+   pages()
     return (
         <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
             <button style={{

@@ -18,7 +18,7 @@ const Details = () => {
     return (
         <div  style={{
             background:`url(https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${detail.backdrop_path}) no-repeat `,
-            boxShadow:"inset 100% 0 0 400px rgba(0,0,0,0.7)",
+            boxShadow:"inset 900px 0 0 400px rgba(0,0,0,0.7)",
             borderRadius:"10px",
             margin:"1% 0"
         }} id="detail">

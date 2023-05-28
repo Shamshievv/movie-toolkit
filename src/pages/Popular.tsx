@@ -4,8 +4,10 @@ import {useAppDispatch} from "../Hooks/useAppDispatch";
 import {getPopular} from "../store/Reducers/ActionCreators";
 import MovieCard from "./MovieCard";
 import Page from "./nextPage/page";
+import {keyboard} from "@testing-library/user-event/dist/keyboard";
 
 const Popular = () => {
+
     const {movie,loader,error} = useAppSelector(state => state.movieSlice)
     const dispatch = useAppDispatch()
     useEffect(()=>{
@@ -25,7 +27,7 @@ const Popular = () => {
                        movie.map((el) => <MovieCard el={el}/>)
                    }
                </div>
-               <Page/>
+               <Page />
            </div>
        </div>
     );
