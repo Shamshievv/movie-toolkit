@@ -10,6 +10,20 @@ export interface IDetail {
     poster_path:string
     backdrop_path:string
     release_date:string
-    vote_average:string
+    vote_average:number
     description:string
+    genres:[
+        {
+            name:string
+            id:number
+        }
+    ]
+    runtime:number
+    original_title:string
+    overview:string
+}
+export interface IActors{
+    profile_path:string
+    id:number
+    original_name:string
 }

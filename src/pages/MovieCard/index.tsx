@@ -32,9 +32,9 @@ export default function MovieCard({el}: ICard) {
     return (
         <div>
             {loader && <Stack spacing={1}>
-                Загрузка
+
                 <Skeleton variant="text" sx={{fontSize: '1rem'}}/>
-                Загрузка
+
                 <Skeleton variant="circular" width={40} height={40}/>
                 <Skeleton variant="rectangular" width={210} height={60}/>
                 <Skeleton variant="rounded" width={210} height={60}/>
@@ -75,9 +75,7 @@ export default function MovieCard({el}: ICard) {
                 </Card>
 
             {loader && <Stack spacing={1}>
-                Загрузка
                 <Skeleton variant="text" sx={{fontSize: '1rem'}}/>
-                Загрузка
                 <Skeleton variant="circular" width={40} height={40}/>
                 <Skeleton variant="rectangular" width={210} height={60}/>
                 <Skeleton variant="rounded" width={210} height={60}/>

@@ -1,0 +1,26 @@
+#actors{
+  .actors{
+    display: flex;
+    overflow-x: auto;
+    &--card{
+    border-radius: 10px;
+    margin: 0 10px;
+    width: 30%;
+    height: 30%;
+    border: 3px solid black;
+      img{
+        border-radius: 10px;
+      }
+      p{
+        color: black;
+        font-weight: 800;
+        text-align: center;
+        font-family: "Source Code Pro",sans-serif;
+      }
+      &__user{
+        width: 138px;
+        height: 175px;
+      }
+    }
+  }
+}

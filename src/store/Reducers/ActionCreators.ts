@@ -3,6 +3,7 @@ import {fetchingError, fetchingMovie, fetchingSuccess} from "./movieSlice";
 import axios from "axios";
 import {API_KEY} from "../../API/API";
 import {fetchingDetail, fetchingDetailError, fetchingDetailSuccess} from "./detailSlice";
+import {fetchingActors, fetchingActorsError, fetchingActorsSuccess} from "./ActorSlice";
 
 export const getPopular = (page:number) => {
     return async (dispatch:AppDispatch) => {
@@ -41,5 +42,16 @@ export const getDetails = (id:any) => {
         }
     }
 }
-
+export const getActors = (id:any) => {
+    return async(dispatch:AppDispatch) => {
+        try {
+            dispatch(fetchingActors())
+            const responsive = await axios(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${API_KEY}&language=en-US`)
+            dispatch(fetchingActorsSuccess(responsive.data.cast))
+        }
+        catch (e:any){
+            dispatch(fetchingActorsError(e.messages))
+        }
+    }
+}
 
