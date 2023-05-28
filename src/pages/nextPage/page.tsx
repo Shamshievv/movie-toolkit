@@ -27,6 +27,11 @@ const Page = () => {
                 alignItems:"center",
                 justifyContent:"center"
             }} onClick={() => setPage(page + 1)}>+</button>
+
+            <p style={{
+               fontWeight:"900",
+                fontFamily:"monospace"
+            }}>Page : <span style={{color:"aqua",fontSize:"15px"}}>{page}</span></p>
             <button  style={{
                 width:"100px",
                 height:"30px",

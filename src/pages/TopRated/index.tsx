@@ -27,11 +27,9 @@ const TopRated = () => {
     useEffect(() => {
         dispatch(getTopRated(page))
     },[page])
-    console.log(movie)
+    // console.log(movie)
     return (
-        <div style={{
-            padding:"9% 0"
-        }}>
+        <div>
 
             {loader &&  <Stack spacing={1}>
                 Загрузка
@@ -105,6 +103,14 @@ const TopRated = () => {
                     alignItems:"center",
                     justifyContent:"center"
                 }} onClick={() => setPage(page + 1)}>+</button>
+
+                <p>
+                    Page :
+                    <span style={{color:"red"}}>
+                      {page}
+                    </span>
+                </p>
+
                 <button  style={{
                     width:"100px",
                     height:"30px",

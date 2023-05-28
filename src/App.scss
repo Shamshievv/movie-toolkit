@@ -1,0 +1,18 @@
+a{
+    text-decoration: none;
+}
+//.bg-details{
+//
+//}
+//.sub-detail{
+//
+//
+//}
+
+#bg--details{
+    &__back{
+        &--sub{
+            display: flex;
+        }
+    }
+}

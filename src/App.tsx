@@ -1,19 +1,22 @@
 import React from 'react';
 
-import './App.css';
+import './App.scss';
 
 import Popular from "./pages/Popular";
 import Header from "./components/Header";
 import {Route, Routes} from "react-router-dom";
 import TopRated from "./pages/TopRated";
+import Details from "./pages/DetailPage";
+
 
 function App() {
   return (
     <div>
-     <Header/>
+       <Header/>
         <Routes>
             <Route path="/popular" element={<Popular/>}/>
             <Route path="/topRated" element={<TopRated/>}/>
+            <Route path="/detail/:id" element={<Details/>}/>
         </Routes>
     </div>
   );

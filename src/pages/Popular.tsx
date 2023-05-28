@@ -13,9 +13,7 @@ const Popular = () => {
     },[])
     console.log(movie)
     return (
-       <div style={{
-           padding:"9% 0"
-       }}>
+       <div>
            <div className="container">
                <div style={{
                    display:"flex",
@@ -25,9 +23,7 @@ const Popular = () => {
                }} className="flex flex-wrap">
                    {
                        movie.map((el) => <MovieCard el={el}/>)
-
                    }
-
                </div>
                <Page/>
            </div>
