@@ -28,3 +28,14 @@ export interface IActors{
     original_name:string
     character:string
 }
+export interface IInformation{
+    place_of_birth:string
+    biography:string
+    birthday:string
+    profile_path:string
+    also_known_as:[key:string]
+    name:string
+    known_for_department:string
+    gender:number
+    text:string
+}

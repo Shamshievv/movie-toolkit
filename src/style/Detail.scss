@@ -24,6 +24,7 @@
          font-family: "Source Code Pro",sans-serif;
        }
        &--circle{
+          cursor: ne-resize;
           width: 65px;
           height: 65px;
           border-radius:50% ;
@@ -46,7 +47,7 @@
         }
       }
        :hover{
-         transform: scale(1.5);
+         transform: scale(1.03);
        }
       }
 

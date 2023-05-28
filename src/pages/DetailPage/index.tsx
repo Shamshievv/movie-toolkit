@@ -38,7 +38,6 @@ const Details = () => {
                                 <div className="detail--nav__cir--circle">
                                     <div className="detail--nav__cir--circle--border">
                                         <p>{detail.vote_average && Math.round(detail.vote_average * 10)}%</p>
-
                                     </div>
                                 </div>
                                 <p className="detail--nav__cir__top">Average</p>

@@ -11,6 +11,7 @@ import Typography from "@mui/material/Typography";
 import jk from "../../image/group-of-young-people-in-cinema.jpg"
 import Stack from "@mui/material/Stack";
 import Skeleton from "@mui/material/Skeleton";
+
 const TopRated = () => {
     const [active,setActive] = useState(100)
     function handleClick () {
@@ -30,6 +31,8 @@ const TopRated = () => {
         setPage(page)
         pages()
     },[page])
+
+
     function pages(){
         if (page === 0){
             return setPage(1)
