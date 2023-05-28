@@ -16,21 +16,20 @@ const Details = () => {
     console.log(id)
 
     return (
-        <div>
+        <div  style={{
+            background:`url(https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${detail.backdrop_path}) no-repeat `,
+            boxShadow:"inset 100% 0 0 400px rgba(0,0,0,0.7)",
+            borderRadius:"10px",
+            margin:"1% 0"
+        }} id="detail">
             {
-             <div style={{
-                 background:`url(https://www.themoviedb.org/t/p/w300_and_h450_bestv2/${detail.backdrop_path}) no-repeat `,
-                 boxShadow:"inset 900px 0 0 400px rgba(0,0,0,0.7)",
-                 borderRadius:"10px",
-                 margin:"10px 0",
-             }} id="bg--details">
-                <div className="bg--details__back" style={{
-
-                }}>
-                    <div className="bg--details__back--sub" >
+             <div className="container">
+                <div className="detail">
+                    <div className="detail--title" >
                         <img style={{
-                            margin:"20px 20px",
-                            borderRadius:"10px"
+                            margin:"1.5% 2%",
+                            borderRadius:"10px",
+
                         }} src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2/${detail.poster_path}`} alt=""/>
                         <h1>{detail.title}</h1>
                     </div>
