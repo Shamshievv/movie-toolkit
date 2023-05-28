@@ -40,8 +40,6 @@ const InfoPage = () => {
                                <span> {info.also_known_as && info.also_known_as}</span> <br/><br/>
                                 <span>Gender:</span> <br/>
                                 {info.gender === 1 ? "Woman" : "Man" }
-
-
                             </p>
                         </div>
                         <div className="info--nav">
