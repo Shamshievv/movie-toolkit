@@ -55,6 +55,12 @@ const Details = () => {
 
             }
         </div>
+            <p style={{
+                color:"black",
+                fontFamily:"Source Code Pro",
+                fontSize:"30px",
+                fontWeight:"800"
+            }}>Actors :</p>
             <Actors/>
 
         </div>

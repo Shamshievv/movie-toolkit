@@ -26,4 +26,5 @@ export interface IActors{
     profile_path:string
     id:number
     original_name:string
+    character:string
 }

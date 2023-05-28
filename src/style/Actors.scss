@@ -2,25 +2,46 @@
   .actors{
     display: flex;
     overflow-x: auto;
+    scroll-behavior: smooth;
     &--card{
+    cursor: pointer;
     border-radius: 10px;
     margin: 0 10px;
-    width: 30%;
-    height: 30%;
+    width: 50%;
+    height: 35%;
     border: 3px solid black;
       img{
+        width: 138px;
+        height: 173px;
         border-radius: 10px;
       }
-      p{
+      &__name{
         color: black;
         font-weight: 800;
         text-align: center;
         font-family: "Source Code Pro",sans-serif;
+        transition:.4s;
+      }
+      &__name:hover{
+        color: #961616;
+
+      }
+      &__role{
+        text-align: center;
+        font-weight: 800;
+        color: gray;
+        transition: .4s;
+        font-family: "Source Code Pro",sans-serif;
+
+      }
+      &__role:hover{
+        color: cyan;
       }
       &__user{
         width: 138px;
         height: 175px;
       }
+
     }
   }
 }

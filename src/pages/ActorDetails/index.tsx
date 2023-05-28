@@ -24,7 +24,8 @@ const Actors = () => {
                                 el.profile_path ? <img src={`https://www.themoviedb.org/t/p/w138_and_h175_face/${el.profile_path}`} alt=""/>
                                     : <img className="actors--card__user" src={user} alt=""/>
                                 }
-                                <p>{el.original_name}</p>
+                                <p className="actors--card__name">{el.original_name}</p>
+                                <p className="actors--card__role" >{el.character}</p>
                             </div>
                         ))
 
