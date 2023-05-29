@@ -1,0 +1,36 @@
+  .movie {
+    overflow-x: auto;
+    display: flex;
+    scroll-behavior: smooth;
+    &--actor {
+      border-radius: 15px;
+      transition: .4s;
+      margin: 0 10px;
+      width: 250px;
+      height: 90%;
+      border: 2px solid black;
+      &__image {
+        border-radius: 15px;
+        transition: .4s;
+        width: 100%;
+        height: 300px;
+        display: block;
+      }
+
+      &__image:hover {
+        color: cyan;
+        transform: scale(1.03);
+      }
+
+      &__title {
+        text-align: center;
+        font-weight: 800;
+        font-family: "Source Code Pro", sans-serif;
+        transition: .4s;
+      }
+    }
+
+    &--actor:hover {
+      transform: scale(1.04);
+    }
+  }

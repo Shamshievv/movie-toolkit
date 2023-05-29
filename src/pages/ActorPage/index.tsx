@@ -3,8 +3,7 @@ import {useAppSelector} from "../../Hooks/useAppSelector";
 import {useAppDispatch} from "../../Hooks/useAppDispatch";
 import {useParams} from "react-router-dom";
 import {getInfo} from "../../store/Reducers/ActionCreators";
-import {IInformation} from "../../types/interfaces";
-
+import ActorMovie from "../ActorMovie";
 const InfoPage = () => {
     const [bio,setBio] = useState(300)
     const {info,loader,error} = useAppSelector(state => state.infoSlice)
@@ -13,7 +12,6 @@ const InfoPage = () => {
     useEffect(()=>{
         dispatch(getInfo(id))
     },[])
-    console.log(info)
     function handleBio (text:any){
         if (bio === 300){
             return setBio(text.length)
@@ -26,9 +24,8 @@ const InfoPage = () => {
         <div id="info">
             <div className="container">
                 <div className="info">
-
                         <div className="info--title">
-                            <img src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${info.profile_path}`} alt=""/>
+                            <img className="info--title__actor" src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${info.profile_path}`} alt=""/>
                             <p className="info--title__about" >
                                <span> Person information:</span> <br/>
                                  {info.known_for_department} <br/><br/>
@@ -51,6 +48,8 @@ const InfoPage = () => {
                                     bio === 300 ? "All view " : "Close"
                                 }</p>
                             </p>
+                            <ActorMovie/>
+
                         </div>
 
                 </div>
@@ -58,5 +57,4 @@ const InfoPage = () => {
         </div>
     );
 };
-
 export default InfoPage;

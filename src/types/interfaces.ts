@@ -38,4 +38,11 @@ export interface IInformation{
     known_for_department:string
     gender:number
     text:string
+    id:number
+}
+export interface IActorMovies{
+    id:number
+    poster_path:string
+    title:string
+
 }
