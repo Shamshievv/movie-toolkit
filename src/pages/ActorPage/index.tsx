@@ -14,11 +14,10 @@ const InfoPage = () => {
         dispatch(getInfo(id))
     },[])
     console.log(info)
-    function handleBio (text:any){
-        if (bio === 500){
+    function handleBio (text:any) {
+        if (bio === 500) {
             return setBio(text.length)
-        }
-        else {
+        } else {
             return setBio(500)
         }
     }

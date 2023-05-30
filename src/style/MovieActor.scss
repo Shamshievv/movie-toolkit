@@ -2,14 +2,12 @@
     overflow-x: auto;
     display: flex;
     &--actor {
-      border-radius: 15px;
+
       transition: .4s;
       margin: 0 10px;
-      width: 250px;
-      height: 90%;
-      border: 2px solid black;
+
       &__image {
-        border-radius: 15px;
+        //border-radius: 15px;
         transition: .4s;
         //width: 100%;
         height: 300px;
@@ -29,6 +27,7 @@
         font-family: "Source Code Pro", sans-serif;
         transition: .4s;
         cursor: pointer;
+        color: black;
       }
       &__title:hover{
         transform: scale(1.03);
