@@ -4,7 +4,6 @@ import {useAppDispatch} from "../../Hooks/useAppDispatch";
 import {Link, NavLink, useParams} from "react-router-dom";
 import {getActors} from "../../store/Reducers/ActionCreators";
 import user from "../../image/user.png"
-
 const Actors = () => {
     const {actor,loader,error} = useAppSelector(state => state.actorSlice)
     const dispatch = useAppDispatch()
