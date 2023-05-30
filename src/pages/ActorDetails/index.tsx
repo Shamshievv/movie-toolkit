@@ -11,7 +11,7 @@ const Actors = () => {
     useEffect(()=>{
         dispatch(getActors(id))
     },[])
-    console.log(actor)
+    // console.log(actor)
     return (
         <div id="actors">
             <div className="container">

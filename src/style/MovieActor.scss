@@ -1,7 +1,6 @@
   .movie {
     overflow-x: auto;
     display: flex;
-    scroll-behavior: smooth;
     &--actor {
       border-radius: 15px;
       transition: .4s;
@@ -12,14 +11,16 @@
       &__image {
         border-radius: 15px;
         transition: .4s;
-        width: 100%;
+        //width: 100%;
         height: 300px;
         display: block;
+        cursor: pointer;
       }
 
       &__image:hover {
         color: cyan;
         transform: scale(1.03);
+
       }
 
       &__title {
@@ -27,10 +28,13 @@
         font-weight: 800;
         font-family: "Source Code Pro", sans-serif;
         transition: .4s;
+        cursor: pointer;
+      }
+      &__title:hover{
+        transform: scale(1.03);
+        color: darkgrey;
       }
     }
 
-    &--actor:hover {
-      transform: scale(1.04);
-    }
+
   }

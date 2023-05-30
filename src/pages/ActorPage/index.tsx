@@ -5,19 +5,21 @@ import {useParams} from "react-router-dom";
 import {getInfo} from "../../store/Reducers/ActionCreators";
 import ActorMovie from "../ActorMovie";
 const InfoPage = () => {
-    const [bio,setBio] = useState(300)
+    const [bio,setBio] = useState(500)
     const {info,loader,error} = useAppSelector(state => state.infoSlice)
     const dispatch = useAppDispatch()
+    const {movie} = useAppSelector(state => state.movieSlice)
     const {id} = useParams()
     useEffect(()=>{
         dispatch(getInfo(id))
     },[])
+    console.log(info)
     function handleBio (text:any){
-        if (bio === 300){
+        if (bio === 500){
             return setBio(text.length)
         }
         else {
-            return setBio(300)
+            return setBio(500)
         }
     }
     return (
@@ -45,13 +47,12 @@ const InfoPage = () => {
                                 <span>Biography:</span> <br/> <br/>
                                 {info.biography && info.biography.slice(0,bio)}
                                 <p className="info--nav__bio--all" onClick={() => handleBio(info.biography)}>{
-                                    bio === 300 ? "All view " : "Close"
+                                    bio === 500 ? "All view " : "Close"
                                 }</p>
+
                             </p>
-                            <ActorMovie/>
-
+                          <ActorMovie/>
                         </div>
-
                 </div>
             </div>
         </div>

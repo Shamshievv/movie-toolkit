@@ -17,13 +17,13 @@ const Details = () => {
     // console.log(id)
 
     return (
-        <div>
+        <div >
         <div  style={{background:`url(https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${detail.backdrop_path}) no-repeat `, boxShadow:"inset 900px 0 0 400px rgba(0,0,0,0.7)", borderRadius:"10px", margin:"1% 0"}} id="detail">
             {
              <div className="container">
                 <div className="detail">
                     <div className="detail--title" >
-                        <img style={{
+                        <img className="detail--title__img" style={{
                             margin:"1.5% 2%",
                             borderRadius:"10px",
                         }} src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2/${detail.poster_path}`} alt=""/>

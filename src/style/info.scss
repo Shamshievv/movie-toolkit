@@ -1,5 +1,4 @@
 #info{
-
   margin: 20px 20px;
   .info{
     display: flex;
@@ -12,6 +11,7 @@
       }
     }
     &--nav{
+      width: 70%;
       margin: 0 0 0 3% ;
       &__bio{
         font-family: "Source Code Pro",sans-serif;

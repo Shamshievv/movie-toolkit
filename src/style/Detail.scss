@@ -1,7 +1,23 @@
 #detail{
+
+  p::selection{
+    background-color:turquoise;
+    color: black;
+  }
+  h1::selection{
+    background-color:turquoise;
+    color: black;
+  }
   .detail{
     &--title{
       display: flex;
+      &__img{
+        transition: .5s;
+      }
+      &__img:hover{
+        transform: scale(1.03);
+
+      }
 
     }
     &--nav{
