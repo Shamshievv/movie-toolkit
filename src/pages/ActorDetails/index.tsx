@@ -20,7 +20,7 @@ const Actors = () => {
                         actor.map((el)=>(
                             <Link to={`/actors/${el.id}`} className="actors--card">
                                 {
-                                el.profile_path ? <img src={`https://www.themoviedb.org/t/p/w138_and_h175_face/${el.profile_path && el.profile_path.slice(0,5)}`} alt=""/>
+                                el.profile_path ? <img src={`https://www.themoviedb.org/t/p/w138_and_h175_face/${ el.profile_path}`} alt=""/>
                                     : <img className="actors--card__user" src={user} alt=""/>
                                 }
                                 <p className="actors--card__name">{el.original_name}</p>
