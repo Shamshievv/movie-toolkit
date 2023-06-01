@@ -18,10 +18,10 @@ const ActorMovie = () => {
     // console.log(movie)
     return (
 
-                 <Link to={`/detail/${id}`}>
                      <div className="movie">
                          {
                              movie.map((el)=>(
+                                 <Link to={`/detail/${el.id}`}>
                                  <div className="movie--actor">
                                      {
                                          el.poster_path ?<img className="movie--actor__image" src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2/${el.poster_path}`} alt=""/>
@@ -32,10 +32,12 @@ const ActorMovie = () => {
                                      }
                                      <p className="movie--actor__title">{el.title}</p>
                                  </div>
+                                 </Link>
                              ))
+
                          }
                      </div>
-                 </Link>
+
 
 
     );

@@ -1,0 +1,13 @@
+#header{
+
+  .header{
+    &--nav{
+      &--search::placeholder{
+        color: aqua;
+        font-family: "Source Code Pro",sans-serif;
+        font-weight: 800;
+      }
+
+    }
+  }
+}

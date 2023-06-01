@@ -11,6 +11,7 @@ import Typography from "@mui/material/Typography";
 import jk from "../../image/group-of-young-people-in-cinema.jpg"
 import Stack from "@mui/material/Stack";
 import Skeleton from "@mui/material/Skeleton";
+import {Link} from "react-router-dom";
 
 const TopRated = () => {
     const [active,setActive] = useState(100)
@@ -56,46 +57,49 @@ const TopRated = () => {
               <div style={{display:"flex",justifyContent:"space-between",flexWrap:"wrap"}}>
                   {
                      movie.map((el)=>(
-                         <div>
-                             <Card style={{margin:"20px 0"}} sx={{ maxWidth: 345 }}>
-                                 <CardActionArea>
-                                     <CardMedia
-                                         component="img"
-                                         height="300"
-                                         image={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${el.poster_path}`}
-                                         alt=""
-                                     />
-                                     <CardContent>
-                                         <Typography  gutterBottom variant="h5" component="div">
-                                             {el.title}
-                                         </Typography>
-                                         <Typography variant="body2" color="text.secondary">
+                         <Link to={`/detail/${el.id}`}>
+                             <div>
+                                 <Card style={{margin:"20px 0"}} sx={{ maxWidth: 345 }}>
+                                     <CardActionArea>
+                                         <CardMedia
+                                             component="img"
+                                             height="300"
+                                             image={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${el.poster_path}`}
+                                             alt=""
+                                         />
+                                         <CardContent>
+                                             <Typography  gutterBottom variant="h5" component="div">
+                                                 {el.title}
+                                             </Typography>
+                                             <Typography variant="body2" color="text.secondary">
 
 
-                                             {
-                                                 el.overview.length === 0 ? "Нету данных" : el.overview.slice(0,active)
-                                             }
+                                                 {
+                                                     el.overview.length === 0 ? "Нету данных" : el.overview.slice(0,active)
+                                                 }
 
-                                             {
-                                                 active === 100   ? <p style={{cursor:"cell"}} onClick={handleClick}>Читать дальше </p>
-                                                     : <p style={{cursor:"ew-resize"}} onClick={handleClick}>Закрыть</p>
-                                             }
+                                                 {
+                                                     active === 100   ? <p style={{cursor:"cell"}} onClick={handleClick}>Читать дальше </p>
+                                                         : <p style={{cursor:"ew-resize"}} onClick={handleClick}>Закрыть</p>
+                                                 }
 
-                                         </Typography>
-                                     </CardContent>
-                                 </CardActionArea>
-                             </Card>
-                             {loader &&  <Stack spacing={1}>
-                                 Загрузка
-                                 <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
-                                 Загрузка
-                                 <Skeleton variant="circular" width={40} height={40} />
-                                 <Skeleton variant="rectangular" width={210} height={60} />
-                                 <Skeleton variant="rounded" width={210} height={60} />
-                             </Stack>
-                             }
+                                             </Typography>
+                                         </CardContent>
+                                     </CardActionArea>
+                                 </Card>
+                                 {loader &&  <Stack spacing={1}>
+                                     Загрузка
+                                     <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
+                                     Загрузка
+                                     <Skeleton variant="circular" width={40} height={40} />
+                                     <Skeleton variant="rectangular" width={210} height={60} />
+                                     <Skeleton variant="rounded" width={210} height={60} />
+                                 </Stack>
+                                 }
 
-                         </div>
+                             </div>
+                         </Link>
+
 
                      ))
                   }
