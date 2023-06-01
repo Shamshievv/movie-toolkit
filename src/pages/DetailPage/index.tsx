@@ -45,7 +45,7 @@ const Details = () => {
                             </div>
                             <p className="detail--nav__say">{"«"  + detail.original_title +  "»"}</p>
                             <p className="detail--nav__overview">Overview : <br/> <br/>
-                                {detail.overview}
+                                {detail.overview === "0" ? "Нету данных" : detail.overview}
                             </p>
                         </div>
 
