@@ -5,6 +5,8 @@
 @import "style/MovieActor";
 @import "style/header";
 @import "style/main";
+@import "style/hero";
+@import "style/footer";
 
 
 a{
@@ -39,4 +41,7 @@ h1::selection{
 }
 span::selection{
     background-color: cyan;
+}
+body,html{
+    overflow-x: hidden;
 }

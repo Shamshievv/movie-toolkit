@@ -10,16 +10,13 @@ const Header = () => {
     const getSearch = () => {
         navigate(`/search/${value}`)
     }
-    // useEffect(()=>{
-    // dispatch(getSearch)
     // },[])
     const handleChange = (e:React.ChangeEvent<any>) => {
         dispatch(getLanguage(e.target.value))
     }
     return (
         <div id="header" style={{
-            textAlign:"center",
-            width:"99%",
+            width:"100%",
             height:"15%",
             background:"#181818",
             borderRadius:"10px",

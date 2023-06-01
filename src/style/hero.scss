@@ -1,0 +1,149 @@
+#hero{
+
+  border-bottom: 10px solid dimgray;
+  width: 100%;
+  background: url("../image/Home-hero-bg.jpg") ;
+  min-height: 90vh;
+  box-shadow:inset 900px 0 0 400px rgba(0,0,0,0.7);
+  border-radius: 0 0 10px 10px;
+  .hero{
+    &--title{
+      padding: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      h1{
+        color: white;
+        font-size: 30px;
+        font-weight: 800;
+        font-family: "Source Code Pro",sans-serif;
+      }
+      h2{
+        color: azure;
+        font-size: 25px;
+        font-weight: 800;
+        font-family: "Source Code Pro",sans-serif;
+      }
+      p{
+        color: azure;
+        font-size: 18px;
+        font-weight: 800;
+        font-family: "Source Code Pro",sans-serif;
+      }
+      &__watch{
+       input{
+         transition: .4s;
+         width: 200px;
+         height: 30px;
+         border-radius: 10px;
+         outline: none;
+         background: 0;
+         backdrop-filter: blur(2px);
+         color: white;
+         font-weight: 800;
+
+       }
+        input:hover{
+          border: 2px solid white;
+          transform: scale(1.02);
+        }
+        button{
+          transition: .4s;
+          margin: 0 10px;
+          width: 170px;
+          border-radius: 5px;
+          border: none;
+          background: red;
+          color: black;
+          font-family: "Source Code Pro",sans-serif;
+          font-weight: 800;
+          height: 30px;
+        }
+        button:hover{
+          transform: scale(1.05);
+          color: white;
+        }
+      }
+
+    }
+  }
+}
+#second{
+  border-bottom: 10px solid gray;
+  border-radius: 0 0 10px 10px;
+  width: 100%;
+  background: black;
+  .second{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    &--title{
+     color: white;
+      h3{
+        font-size: 50px;
+        font-weight: 700;
+        font-family: "Source Code Pro",sans-serif;
+      }
+      p{
+        font-size: 20px;
+        font-weight: 500;
+        font-family: "Source Code Pro",sans-serif;
+      }
+    }
+    &--tv{
+      position: relative;
+      &__image{
+        position: sticky;
+        z-index: 99;
+      }
+      &__video{
+        width: 100%;
+        height: 260px;
+        position: absolute;
+        top: 20%;
+        left: 13%;
+
+      }
+    }
+  }
+}
+#last{
+  border-bottom: 8px solid gray;
+  border-radius: 0 0 10px 10px;
+  background: black;
+  .last{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    &--title{
+     color: white;
+      h3{
+        font-size: 50px;
+        font-weight: 700;
+        font-family: "Source Code Pro",sans-serif;
+      }
+      h5{
+        font-size: 20px;
+        font-weight: 500;
+        font-family: "Source Code Pro",sans-serif;
+      }
+    }
+    &--tv{
+      position: relative;
+      &__image{
+        position: sticky;
+        z-index: 99;
+      }
+     &__video{
+       position: absolute;
+       width: 100%;
+       height: 221px;
+       top: 10%;
+     }
+    }
+  }
+}
