@@ -56,7 +56,7 @@ const InfoPage = () => {
                                 <span>Biography:</span> <br/> <br/>
                                 { info.biography === "" ? "No information" :info.biography && info.biography.slice(0,bio) }
                                 <p className="info--nav__bio--all" onClick={() => handleBio(info.biography)}>{
-                                    bio === 0 ? "" : "" &&  bio === 500 ? "All view " : "Close"
+                                    bio === 0 ? "All view" : "All view" &&  bio === 500 ? "All view " : "Close"
                                 }</p>
                             </p>
                           <ActorMovie/>

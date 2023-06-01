@@ -73,9 +73,25 @@ const Header = () => {
                         borderRadius:"10px",
                         border:"none"
                     }}>Add</button>
-                    <select onChange={(e) => handleChange(e)}>
-                        <option value="en-US">English</option>
-                        <option value="ru-RU">Russian</option>
+                    <select style={{
+
+                        background:"darkgrey",
+                        borderRadius:"10px",
+                        width:"90px",
+                        height:"30px",
+                        outline:"none",
+                        border:"none"
+                    }} onChange={(e) => handleChange(e)}>
+                        <option style={{
+                            background:"aqua",
+                            color:"black",
+                            fontWeight:"800"
+                        }} value="en-US">English</option>
+                        <option  style={{
+                            background:"aqua",
+                            color:"black",
+                            fontWeight:"800"
+                        }}  value="ru-RU">Russian</option>
                     </select>
                 </div>
             </div>
