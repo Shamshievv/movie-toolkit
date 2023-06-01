@@ -16,9 +16,7 @@
 
   #info{
    .info{
-     flex-wrap: wrap;
-     align-items: center;
-     justify-content: center;
+
      &--nav{
        &__bio{
          width: 90%;
@@ -37,12 +35,20 @@
  #detail{
    .detail{
      &--nav{
+
        &__genres{
          font-size: 13px;
        }
      }
    }
  }
+}
+#info{
+  .info{
+    &--nav{
+      width: 56%;
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -81,6 +87,14 @@
       }
     }
   }
+  #header{
+    .header{
+      height: 70px;
+      a{
+        display: none;
+      }
+    }
+  }
 
 }
 
@@ -114,14 +128,21 @@
       justify-content: center;
       &--nav{
         &__bio{
-          font-size: 15px;
-          width: 74%;
+          width: 100%;
         }
       }
       &--title{
         &__actor{
-          width: 212px;
-          height: 247px;
+          width: 273px;
+          height: 280px;
+        }
+        &__about{
+          span{
+            font-size: 29px;
+          }
+          p{
+            font-size: 29px;
+          }
         }
       }
     }
@@ -158,8 +179,8 @@
   #info{
     .info{
       &--nav{
-        margin: 0 0 0 -17%;
-        width: 38%;
+        margin: 0 0 0 4%;
+        width: 100%;
         &__bio{
           font-size: 17px;
           width: 100%;
@@ -213,7 +234,21 @@
       }
     }
   }
+  #info{
+    .info{
+      &--nav{
+
+      }
+      &--title{
+        &__actor{
+          width: 254px;
+          height: 259px;
+        }
+      }
+    }
+  }
 }
+
 
 
 @media (max-width: 400px) {
@@ -228,21 +263,22 @@
   }
   #info{
     .info{
+      flex-direction: column;
       &--nav{
-        margin: -27px 0 0 -31%;
-        width: 38%;
+        margin: -27px 0 0 -13%;
+        width: 100%;
         &__bio{
-          font-size: 13px;
-          width: 130%;
+          font-size: 17px;
+          width: 110%;
         }
       }
       &--title{
         &__about{
-          font-size: 13px;
+          font-size: 22px;
         }
         &__actor{
-          width: 158px;
-          height: 165px;
+          width: 261px;
+          height: 247px;
         }
       }
     }
