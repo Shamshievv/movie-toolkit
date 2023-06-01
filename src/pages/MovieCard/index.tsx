@@ -14,20 +14,17 @@ import {Link} from "react-router-dom";
 import {useAppDispatch} from "../../Hooks/useAppDispatch";
 import { getPopular} from "../../store/Reducers/ActionCreators";
 import Popular from "../Popular";
+import Page from "../nextPage/page";
 
 interface ICard {
     el: IMovie
 }
 
 export default function MovieCard({el}: ICard) {
-    const [page, setPage] = useState(1)
     const {movie, loader, error} = useAppSelector(state => state.movieSlice)
     const [active, setActive] = useState(100)
     const {language} = useAppSelector(state => state.ActorMovieSlice)
-    const dispatch = useAppDispatch()
-    useEffect(()=>{
-        dispatch(getPopular(page,language))
-    },[language,page])
+
     function handleClick() {
         if (active === 100) {
             setActive(1200)
@@ -85,8 +82,6 @@ export default function MovieCard({el}: ICard) {
                 <Skeleton variant="rectangular" width={210} height={60}/>
                 <Skeleton variant="rounded" width={210} height={60}/>
             </Stack>}
-
-            <Popular page={page}/>
 
         </div>
     );

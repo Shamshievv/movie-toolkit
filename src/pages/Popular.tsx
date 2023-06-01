@@ -5,13 +5,11 @@ import {getPopular} from "../store/Reducers/ActionCreators";
 import MovieCard from "./MovieCard";
 import Page from "./nextPage/page";
 
-const Popular = ({page}:any) => {
+const Popular = () => {
     const {movie,loader,error} = useAppSelector(state => state.movieSlice)
     const dispatch = useAppDispatch()
     const {language} = useAppSelector(state => state.ActorMovieSlice)
-    useEffect(()=>{
-        dispatch(getPopular(1,language))
-    },[])
+
     console.log(movie)
     return (
        <div>
@@ -26,7 +24,7 @@ const Popular = ({page}:any) => {
                        movie.map((el) => <MovieCard el={el}/>)
                    }
                </div>
-               <Page />
+               <Page/>
            </div>
        </div>
     );

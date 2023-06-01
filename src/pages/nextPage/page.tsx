@@ -12,7 +12,7 @@ const Page = () => {
         dispatch(getPopular(page,language))
         setPage(page)
         pages()
-    },[page,language])
+    },[language,page])
    function pages(){
        if (page === 0){
            return  setPage(1)
