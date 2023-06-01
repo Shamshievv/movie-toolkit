@@ -68,7 +68,28 @@
 }
 
 @media (max-width: 576px) {
+  #detail{
+    .detail{
 
+      &--title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        &__img{
+          width: 390px;
+          height: 350px;
+        }
+      }
+      &--nav{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
   #info{
     .info{
       flex-wrap: wrap;
@@ -165,7 +186,16 @@
 }
 
 @media (max-width: 462px) {
-
+  #detail{
+    .detail{
+      &--title{
+        &__img{
+          width: 348px;
+          height: 310px;
+        }
+      }
+    }
+  }
 }
 
 
@@ -225,7 +255,16 @@
 }
 
 @media (max-width: 375px) {
-
+  #detail{
+    .detail{
+      &--title{
+        &__img{
+          width: 259px;
+          height: 251px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 320px) {

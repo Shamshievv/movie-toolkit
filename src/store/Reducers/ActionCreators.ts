@@ -66,7 +66,7 @@ export const getInfo = (id:any) => {
     return async(dispatch:AppDispatch) => {
         try {
             dispatch(fetchingInfo())
-            const responsive = await axios(`https://api.themoviedb.org/3/person/${id}?api_key=${API_KEY}&language=en-US`)
+                const responsive = await axios(`https://api.themoviedb.org/3/person/${id}?api_key=${API_KEY}&language=en-US`)
             dispatch(fetchingInfoSuccess(responsive.data))
         }
         catch (e:any){
