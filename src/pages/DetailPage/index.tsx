@@ -9,10 +9,11 @@ const Details = () => {
     const {detail, loader, error} = useAppSelector(state => state.detailSlice)
     const dispatch = useAppDispatch()
     const {id} = useParams()
+    const {language} = useAppSelector(state => state.ActorMovieSlice)
 
     useEffect(() => {
-        dispatch(getDetails(id))
-    }, [])
+        dispatch(getDetails(id,language))
+    }, [language])
     // console.log(detail)
     // console.log(id)
 

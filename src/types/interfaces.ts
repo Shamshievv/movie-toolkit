@@ -3,6 +3,7 @@ export interface IMovie {
     poster_path:string
     overview:string
     id:number
+
 }
 export interface IDetail {
     title:string
@@ -44,5 +45,10 @@ export interface IActorMovies{
     id:number
     poster_path:string
     title:string
-
+}
+export interface ISearch{
+    title:string
+    id:number
+    poster_path:string
+    overview:string
 }

@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useAppSelector} from "../../Hooks/useAppSelector";
 import {useAppDispatch} from "../../Hooks/useAppDispatch";
-import {Link, NavLink, useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {getActors} from "../../store/Reducers/ActionCreators";
 import user from "../../image/user.png"
 const Actors = () => {

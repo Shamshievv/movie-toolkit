@@ -6,12 +6,13 @@ const Page = () => {
     const [page,setPage] = useState(1)
     const {movie,loader,error} = useAppSelector(state => state.movieSlice)
     const dispatch = useAppDispatch()
+    const {language} = useAppSelector(state => state.ActorMovieSlice)
 
     useEffect(()=>{
-        dispatch(getPopular(page))
+        dispatch(getPopular(page,language))
         setPage(page)
         pages()
-    },[page])
+    },[page,language])
    function pages(){
        if (page === 0){
            return  setPage(1)

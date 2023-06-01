@@ -4,14 +4,13 @@ import {useAppDispatch} from "../Hooks/useAppDispatch";
 import {getPopular} from "../store/Reducers/ActionCreators";
 import MovieCard from "./MovieCard";
 import Page from "./nextPage/page";
-import {keyboard} from "@testing-library/user-event/dist/keyboard";
 
-const Popular = () => {
-
+const Popular = ({page}:any) => {
     const {movie,loader,error} = useAppSelector(state => state.movieSlice)
     const dispatch = useAppDispatch()
+    const {language} = useAppSelector(state => state.ActorMovieSlice)
     useEffect(()=>{
-        dispatch(getPopular(1))
+        dispatch(getPopular(1,language))
     },[])
     console.log(movie)
     return (

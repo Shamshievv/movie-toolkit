@@ -1,7 +1,21 @@
-import React from 'react';
-import {NavLink} from "react-router-dom";
+import React, {useEffect, useState} from 'react';
+import {NavLink, useNavigate} from "react-router-dom";
+import {useAppDispatch} from "../../Hooks/useAppDispatch";
+import {getLanguage} from "../../store/Reducers/ActionCreators";
 
 const Header = () => {
+    const [value,setValue] = useState("")
+    const navigate = useNavigate()
+    const dispatch = useAppDispatch()
+    const getSearch = () => {
+        navigate(`/search/${value}`)
+    }
+    // useEffect(()=>{
+    // dispatch(getSearch)
+    // },[])
+    const handleChange = (e:React.ChangeEvent<any>) => {
+        dispatch(getLanguage(e.target.value))
+    }
     return (
         <div id="header" style={{
             textAlign:"center",
@@ -41,7 +55,9 @@ const Header = () => {
                      Popular
                 </NavLink>
                 <div className="header--nav">
-                    <input className="header--nav__search" style={{
+                    <input onKeyDown={(e) => {
+                        if (e.key === "Enter") getSearch()
+                    }} onChange={(e) => setValue(e.target.value)} className="header--nav__search" style={{
                         border:"none",
                         outline:"none",
                         width:"150px",
@@ -49,7 +65,7 @@ const Header = () => {
                         borderRadius:"10px",
                         background:"darkgray"
                     }} placeholder = " movie name" type="text"/>
-                    <button style={{
+                    <button onClick={() => getSearch() } style={{
                         margin:"0 10px",
                         background:"darkgray",
                         width:"50px",
@@ -57,6 +73,10 @@ const Header = () => {
                         borderRadius:"10px",
                         border:"none"
                     }}>Add</button>
+                    <select onChange={(e) => handleChange(e)}>
+                        <option value="en-US">English</option>
+                        <option value="ru-RU">Russian</option>
+                    </select>
                 </div>
             </div>
         </div>

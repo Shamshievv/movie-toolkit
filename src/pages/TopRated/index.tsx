@@ -12,6 +12,7 @@ import jk from "../../image/group-of-young-people-in-cinema.jpg"
 import Stack from "@mui/material/Stack";
 import Skeleton from "@mui/material/Skeleton";
 import {Link} from "react-router-dom";
+import {ActorMovieSlice} from "../../store/Reducers/ActorMovieSlice";
 
 const TopRated = () => {
     const [active,setActive] = useState(100)
@@ -27,11 +28,12 @@ const TopRated = () => {
     const {movie,loader,error} = useAppSelector(state => state.movieSlice)
     const dispatch = useAppDispatch()
     const [page,setPage] = useState(1)
+     const {language} = useAppSelector(state => state.ActorMovieSlice)
     useEffect(() => {
-        dispatch(getTopRated(page))
+        dispatch(getTopRated(page,language))
         setPage(page)
         pages()
-    },[page])
+    },[page,language])
 
 
     function pages(){

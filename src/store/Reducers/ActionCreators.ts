@@ -5,13 +5,20 @@ import {API_KEY} from "../../API/API";
 import {fetchingDetail, fetchingDetailError, fetchingDetailSuccess} from "./detailSlice";
 import {fetchingActors, fetchingActorsError, fetchingActorsSuccess} from "./ActorSlice";
 import {fetchingInfo, fetchingInfoError, fetchingInfoSuccess} from "./infoSlice";
-import {fetchingActorMovie, fetchingActorMovieError, fetchingActorMovieSuccess} from "./ActorMovieSlice";
+import {
+    fetchingActorMovie,
+    fetchingActorMovieError,
+    fetchingActorMovieSuccess,
+    fetchingLanguage
+} from "./ActorMovieSlice";
+import {fetchingSearch, fetchingSearchError, fetchingSearchSuccess} from "./SearchSlice";
 
-export const getPopular = (page:number) => {
+export const getPopular = (page:number,language:any) => {
     return async (dispatch:AppDispatch) => {
        try {
            dispatch(fetchingMovie())
-           const responsive = await axios(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=vote_average.desc&without_genres=99,10755&vote_count.gte=200&api_key=${API_KEY}`)
+           const responsive = await axios(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=${language
+           }&page=${page}&sort_by=vote_average.desc&without_genres=99,10755&vote_count.gte=200&api_key=${API_KEY}`)
            dispatch(fetchingSuccess(responsive.data.results))
        }
        catch (e:any){
@@ -19,11 +26,11 @@ export const getPopular = (page:number) => {
        }
    }
 }
-export const getTopRated = (page:number) => {
+export const getTopRated = (page:number,language : any) => {
    return async (dispatch:AppDispatch) => {
        try {
            dispatch(fetchingMovie())
-           const responsive = await axios(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=popularity.desc&with_release_type=2|3&release_date&api_key=${API_KEY}`)
+           const responsive = await axios(`https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=${language}&page=${page}&sort_by=popularity.desc&with_release_type=2|3&release_date&api_key=${API_KEY}`)
            dispatch(fetchingSuccess(responsive.data.results))
        }
        catch (e:any){
@@ -32,11 +39,11 @@ export const getTopRated = (page:number) => {
    }
 }
 
-export const getDetails = (id:any) => {
+export const getDetails = (id:any,language:any) => {
     return async (dispatch:AppDispatch) => {
         try {
             dispatch(fetchingDetail())
-            const responsive = await axios(` https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`)
+            const responsive = await axios(` https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=${language}`)
             dispatch(fetchingDetailSuccess(responsive.data))
         }
         catch (e:any){
@@ -80,4 +87,23 @@ export const getActorMovie = (id:any) => {
         }
     }
 }
+export const getSearchMovie = (movieName:any) => {
+    return async(dispatch:AppDispatch) => {
+        try {
+            dispatch(fetchingSearch())
+            const responsive = await axios(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${movieName})
+`)
+            dispatch(fetchingSearchSuccess(responsive.data.results))
+        }
+        catch (e:any){
+            dispatch(fetchingSearchError(e.messages))
+        }
+    }
+}
 
+export const getLanguage = (language:any)=> {
+     return async (dispatch:AppDispatch)=> {
+         dispatch(fetchingLanguage(language))
+     }
+
+}

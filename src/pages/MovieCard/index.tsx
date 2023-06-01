@@ -4,13 +4,16 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {CardActionArea} from '@mui/material';
 import {IMovie} from "../../types/interfaces";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {useAppSelector} from "../../Hooks/useAppSelector";
 import * as React from 'react';
 import Skeleton from '@mui/material/Skeleton';
 import Stack from '@mui/material/Stack';
-import Page from "../nextPage/page";
+
 import {Link} from "react-router-dom";
+import {useAppDispatch} from "../../Hooks/useAppDispatch";
+import { getPopular} from "../../store/Reducers/ActionCreators";
+import Popular from "../Popular";
 
 interface ICard {
     el: IMovie
@@ -20,7 +23,11 @@ export default function MovieCard({el}: ICard) {
     const [page, setPage] = useState(1)
     const {movie, loader, error} = useAppSelector(state => state.movieSlice)
     const [active, setActive] = useState(100)
-
+    const {language} = useAppSelector(state => state.ActorMovieSlice)
+    const dispatch = useAppDispatch()
+    useEffect(()=>{
+        dispatch(getPopular(page,language))
+    },[language,page])
     function handleClick() {
         if (active === 100) {
             setActive(1200)
@@ -44,12 +51,10 @@ export default function MovieCard({el}: ICard) {
                     <CardActionArea>
                         <Link to={`/detail/${el.id}`}>
                         <CardMedia
-
                             component="img"
                             height="300"
                             image={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${el.poster_path}`}
                             alt=""
-
                         />
                         </Link>
                         <CardContent>
@@ -80,6 +85,8 @@ export default function MovieCard({el}: ICard) {
                 <Skeleton variant="rectangular" width={210} height={60}/>
                 <Skeleton variant="rounded" width={210} height={60}/>
             </Stack>}
+
+            <Popular page={page}/>
 
         </div>
     );

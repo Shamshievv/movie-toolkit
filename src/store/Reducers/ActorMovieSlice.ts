@@ -5,11 +5,13 @@ interface IActorMovie{
     movie : IActorMovies[]
     loader:boolean
     error:string
+    language : string
 }
 const initialState:IActorMovie = {
     movie:[],
     loader:false,
-    error:""
+    error:"",
+    language : "en-US"
 }
 export const ActorMovieSlice = createSlice({
     name:"actorMovie",
@@ -27,8 +29,12 @@ export const ActorMovieSlice = createSlice({
             state.loader = true
             state.movie = []
             state.error = action.payload
+        },
+        fetchingLanguage(state,action){
+            state.language = action.payload
         }
+
     }
 })
 export default ActorMovieSlice.reducer
-export const {fetchingActorMovie,fetchingActorMovieSuccess,fetchingActorMovieError} = ActorMovieSlice.actions
+export const {fetchingActorMovie,fetchingLanguage,fetchingActorMovieSuccess,fetchingActorMovieError} = ActorMovieSlice.actions
