@@ -8,6 +8,7 @@ const Actors = () => {
     const {actor,loader,error} = useAppSelector(state => state.actorSlice)
     const dispatch = useAppDispatch()
     const {id} = useParams()
+    const {language} = useAppSelector(state => state.ActorMovieSlice)
     useEffect(()=>{
         dispatch(getActors(id))
     },[])

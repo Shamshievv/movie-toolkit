@@ -104,5 +104,4 @@ export const getLanguage = (language:any)=> {
      return async (dispatch:AppDispatch)=> {
          dispatch(fetchingLanguage(language))
      }
-
 }

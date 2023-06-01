@@ -9,12 +9,8 @@ import {useAppSelector} from "../../Hooks/useAppSelector";
 import * as React from 'react';
 import Skeleton from '@mui/material/Skeleton';
 import Stack from '@mui/material/Stack';
-
 import {Link} from "react-router-dom";
 import {useAppDispatch} from "../../Hooks/useAppDispatch";
-import { getPopular} from "../../store/Reducers/ActionCreators";
-import Popular from "../Popular";
-import Page from "../nextPage/page";
 
 interface ICard {
     el: IMovie
@@ -24,6 +20,8 @@ export default function MovieCard({el}: ICard) {
     const {movie, loader, error} = useAppSelector(state => state.movieSlice)
     const [active, setActive] = useState(100)
     const {language} = useAppSelector(state => state.ActorMovieSlice)
+    const dispatch  = useAppDispatch()
+
 
     function handleClick() {
         if (active === 100) {

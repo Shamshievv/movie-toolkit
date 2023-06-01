@@ -13,10 +13,16 @@ const Search = () => {
        dispatch(getSearchMovie(movieName))
     },[search])
     return (
-        <div>
+        <div style={{
+            display:'flex',
+            alignItems:"center",
+            flexWrap:"wrap"
+        }}>
             {
                 search.map(el =>(
-                    <div >
+                    <div style={{
+                        margin:"0 10px"
+                    }} >
                         <MovieCard el={el}/>
                     </div>
                 ))

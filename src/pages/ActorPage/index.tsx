@@ -4,16 +4,22 @@ import {useAppDispatch} from "../../Hooks/useAppDispatch";
 import {useParams} from "react-router-dom";
 import {getInfo} from "../../store/Reducers/ActionCreators";
 import ActorMovie from "../ActorMovie";
+import axios from "axios";
+import {API_KEY} from "../../API/API";
 const InfoPage = () => {
     const [bio,setBio] = useState(500)
     const {info,loader,error} = useAppSelector(state => state.infoSlice)
     const dispatch = useAppDispatch()
     const {movie} = useAppSelector(state => state.movieSlice)
     const {id} = useParams()
+    const {language} = useAppSelector(state => state.ActorMovieSlice)
+
+
     useEffect(()=>{
         dispatch(getInfo(id))
+
     },[])
-    console.log(info)
+
     function handleBio (text:any) {
         if (bio === 500) {
             return setBio(text.length)
@@ -39,6 +45,7 @@ const InfoPage = () => {
                                 <span>Gender:</span> <br/>
                                 {info.gender === 1 ? "Woman" : "Man" }
                             </p>
+
                         </div>
                         <div className="info--nav">
                             <h3>{info.name}</h3>
@@ -48,7 +55,6 @@ const InfoPage = () => {
                                 <p className="info--nav__bio--all" onClick={() => handleBio(info.biography)}>{
                                     bio === 500 ? "All view " : "Close"
                                 }</p>
-
                             </p>
                           <ActorMovie/>
                         </div>

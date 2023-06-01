@@ -1,0 +1,233 @@
+@media (max-width: 1440px) {
+
+}
+
+@media (max-width: 1200px) {
+
+
+}
+
+@media (max-width: 1140px) {
+
+
+}
+
+@media (max-width: 1024px) {
+
+  #info{
+   .info{
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+     &--nav{
+       &__bio{
+         width: 90%;
+       }
+     }
+   }
+  }
+}
+
+@media (max-width: 992px) {
+
+
+}
+
+@media (max-width: 800px) {
+
+}
+
+@media (max-width: 768px) {
+  #info{
+    .info{
+      &--nav{
+        &__bio{
+          width: 68%;
+        }
+      }
+      &--title{
+        &__actor{
+          width: 300px;
+          height: 350px;
+        }
+      }
+    }
+  }
+  .movie{
+    &--actor{
+      &__image{
+        height: 200px;
+      }
+      &__title{
+        font-size: 15px;
+        color: dimgray;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  #info{
+    .info{
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      &--nav{
+        &__bio{
+          font-size: 15px;
+          width: 74%;
+        }
+      }
+      &--title{
+        &__actor{
+          width: 212px;
+          height: 247px;
+        }
+      }
+    }
+  }
+  .movie{
+    &--actor{
+      &__image{
+        height: 170px;
+      }
+      &__title{
+        font-size: 10px;
+        color: dimgray;
+      }
+    }
+  }
+  #header{
+    .header{
+      height: 50px;
+
+      a{
+        display: none;
+      }
+      &--nav{
+        &__search{
+
+
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  #info{
+    .info{
+      &--nav{
+        margin: 0 0 0 -17%;
+        width: 38%;
+        &__bio{
+          font-size: 17px;
+          width: 100%;
+        }
+      }
+      &--title{
+        &__actor{
+          width: 191px;
+          height: 231px;
+        }
+      }
+    }
+  }
+  .movie{
+    &--actor{
+      &__image{
+        height: 170px;
+      }
+      &__title{
+        font-size: 10px;
+        color: dimgray;
+      }
+    }
+  }
+  #header{
+    .header{
+      height: 50px;
+
+      a{
+        display: none;
+      }
+      &--nav{
+        &__search{
+
+
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 462px) {
+
+}
+
+
+@media (max-width: 400px) {
+  #info{
+    .info{
+      &--nav{
+        margin: -27px 0 0 -31%;
+        width: 38%;
+        &__bio{
+          font-size: 13px;
+          width: 130%;
+        }
+      }
+      &--title{
+        &__about{
+          font-size: 13px;
+        }
+        &__actor{
+          width: 158px;
+          height: 165px;
+        }
+      }
+    }
+  }
+  .movie{
+    &--actor{
+      &__image{
+        height: 170px;
+      }
+      &__title{
+        font-size: 10px;
+        color: dimgray;
+      }
+    }
+  }
+  #header{
+    .header{
+      height: 50px;
+
+      a{
+        display: none;
+      }
+      &--nav{
+        &__search{
+
+
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 380px) {
+
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (max-width: 320px) {
+
+}
