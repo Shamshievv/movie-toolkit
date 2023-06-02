@@ -6,6 +6,7 @@ import {getInfo} from "../../store/Reducers/ActionCreators";
 import ActorMovie from "../ActorMovie";
 import axios from "axios";
 import {API_KEY} from "../../API/API";
+import akti from "../../image/akti.jpg"
 const InfoPage = () => {
     const [bio,setBio] = useState(500)
     const {info,loader,error} = useAppSelector(state => state.infoSlice)
@@ -35,7 +36,12 @@ const InfoPage = () => {
             <div className="container">
                 <div className="info">
                         <div className="info--title">
-                            <img className="info--title__actor" src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${info.profile_path}`} alt=""/>
+                            {
+                             info.profile_path ?   <img className="info--title__actor" src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${info.profile_path}`} alt=""/>
+                                : <img width={250} height={300} src={akti} alt=""/>
+                            }
+
+
                             <p className="info--title__about" >
                                <span> Person information:</span> <br/>
                                  {info.known_for_department} <br/><br/>
