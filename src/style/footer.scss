@@ -1,22 +1,68 @@
 #footer{
+  min-height:20vh ;
   background: black;
-  width: 100%;
+
   .footer{
+    hr{
+      border: 5px solid red;
+    }
     &--title{
       display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
       flex-wrap: wrap;
+
       a{
+        transition: .4s;
         color: white;
         font-family: "Source Code Pro",sans-serif;
-        margin: 0 10px;
+        margin: 10% 10px;
       }
+
       &__icons{
+        margin: 2% 0 0  0;
         display: flex;
-
-
+        align-items: end;
+        justify-content: center;
+        flex-direction: column;
         color: white;
+        p{
+          font-size: 20px;
+          font-family: "Source Code Pro",sans-serif;
+          font-weight: 200;
+        }
+       div{
+       }
+        &--insta{
+          font-size: 25px;
+        }
+        &--github{
+          font-size: 25px;
+        }
+        &--whatsapp{
+          font-size: 25px;
+        }
+        &--linkedin{
+          font-size: 25px;
+        }
+        &--insta:hover{
+          color: red;
+          transform: scale(1.03);
+        }
+        &--github:hover{
+          color: gray;
+          transform: scale(1.03);
+        }
+        &--linkedin:hover{
+          color: blue;
+          transform: scale(1.03);
+        }
+        &--whatsapp:hover{
+          color: forestgreen;
+          transform: scale(1.03);
+        }
+
 
       }
     }
