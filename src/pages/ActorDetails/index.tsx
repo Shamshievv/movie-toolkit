@@ -4,6 +4,9 @@ import {useAppDispatch} from "../../Hooks/useAppDispatch";
 import {Link, useParams} from "react-router-dom";
 import {getActors} from "../../store/Reducers/ActionCreators";
 import user from "../../image/user.png"
+import {CircularProgress} from "@mui/material";
+import Skeleton from "@mui/material/Skeleton";
+import Stack from "@mui/material/Stack";
 const Actors = () => {
     const {actor,loader,error} = useAppSelector(state => state.actorSlice)
     const dispatch = useAppDispatch()
@@ -13,6 +16,7 @@ const Actors = () => {
         dispatch(getActors(id))
     },[])
     // console.log(actor)
+
     return (
         <div id="actors">
             <div className="container">
@@ -23,6 +27,7 @@ const Actors = () => {
                                 {
                                 el.profile_path ? <img src={`https://www.themoviedb.org/t/p/w138_and_h175_face/${ el.profile_path}`} alt=""/>
                                     : <img className="actors--card__user" src={user} alt=""/>
+
                                 }
                                 <p className="actors--card__name">{el.original_name}</p>
                                 <p className="actors--card__role" >{el.character}</p>

@@ -26,7 +26,7 @@ export const ActorMovieSlice = createSlice({
             state.error = ""
         },
         fetchingActorMovieError(state,action:PayloadAction<string>){
-            state.loader = true
+            state.loader = false
             state.movie = []
             state.error = action.payload
         },

@@ -69,7 +69,7 @@ const Header = () => {
                         height:"30px",
                         borderRadius:"10px",
                         border:"none"
-                    }}>Add</button>
+                    }}>Watch</button>
                     <select style={{
 
                         background:"darkgrey",
