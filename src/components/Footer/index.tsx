@@ -1,13 +1,11 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import {BsGithub, BsInstagram, BsLinkedin, BsWhatsapp} from "react-icons/bs";
-
 const Footer = () => {
     return (
         <div id="footer">
             <div className="container">
                 <div className="footer">
-
                     <div className="footer--title">
                         <Link to={"/popular"}>
                             Popular
