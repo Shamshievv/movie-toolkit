@@ -4,7 +4,9 @@ import last from  "../../image/last-bg.png"
 
 const Home = () => {
     return (
-       <div>
+       <div style={{
+           background:"black"
+       }}>
            <div id="hero">
                <div className="container">
                    <div className="hero">

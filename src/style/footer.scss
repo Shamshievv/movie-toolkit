@@ -1,5 +1,5 @@
 #footer{
-  min-height:20vh ;
+  //min-height:20vh ;
   background: black;
 
   .footer{
@@ -17,7 +17,7 @@
         transition: .4s;
         color: white;
         font-family: "Source Code Pro",sans-serif;
-        margin: 10% 10px;
+        margin: 5% 10px;
       }
 
       &__icons{
@@ -45,9 +45,19 @@
         }
         &--linkedin{
           font-size: 25px;
+        }&--telegram{
+          font-size: 25px;
         }
         &--insta:hover{
           color: red;
+          transform: scale(1.03);
+        }
+        &--telegram:hover{
+          background: white;
+          width: 5px;
+          height: 5px;
+          border-radius: 50% 50% 50% 50%;
+          color: black;
           transform: scale(1.03);
         }
         &--github:hover{
