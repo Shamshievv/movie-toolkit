@@ -12,7 +12,7 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 function App() {
   return (
-    <div >
+    <div className="App">
        <Header/>
         <Routes>
             <Route path="/popular" element={<Popular/>}/>

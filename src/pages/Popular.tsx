@@ -12,7 +12,7 @@ const Popular = () => {
 
     console.log(movie)
     return (
-       <div>
+       <div id="popular">
            <div className="container">
                <div style={{
                    display:"flex",

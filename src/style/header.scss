@@ -1,5 +1,13 @@
 #header{
   width: 100%;
+  background: url(https://images.wallpaperscraft.ru/image/single/linii_shtrihi_piatna_137329_3240x5760.jpg) repeat;
+  animation: animated-bg 60s linear infinite;
+}
+@keyframes animated-bg {
+  from { background-position: 0 0; }
+  to { background-position: 0 1000px; }
+}
+
   .header{
     &--nav{
       &--search::placeholder{
@@ -10,4 +18,3 @@
 
     }
   }
-}

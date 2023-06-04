@@ -41,7 +41,7 @@ const TopRated = () => {
     pages()
     // console.log(movie)
     return (
-        <div>
+        <div className="rated">
 
             {loader &&  <Stack spacing={1}>
                 <Skeleton variant="text" sx={{ fontSize: '1rem' }} />
@@ -56,7 +56,7 @@ const TopRated = () => {
                      movie.map((el)=>(
                          <Link to={`/detail/${el.id}`}>
                              <div>
-                                 <Card style={{margin:"20px 0"}} sx={{ maxWidth: 345 }}>
+                                 <Card style={{margin:"20px 0",background:"gray"}} sx={{ maxWidth: 345 }}>
                                      <CardActionArea>
                                          <CardMedia
                                              component="img"
@@ -106,8 +106,8 @@ const TopRated = () => {
                 <button style={{
                     width:"100px",
                     height:"30px",
-                    background:"black",
-                    border:"none",
+                    background:"0",
+                    border:"3px solid black",
                     cursor:"pointer",
                     margin:"0 20px",
                     color:"wheat",

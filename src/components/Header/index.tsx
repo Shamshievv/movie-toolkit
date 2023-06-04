@@ -13,12 +13,12 @@ const Header = () => {
     // },[])
     const handleChange = (e:React.ChangeEvent<any>) => {
         dispatch(getLanguage(e.target.value))
+
     }
     return (
         <div id="header" style={{
             width:"100%",
             height:"15%",
-            background:"#181818",
             borderRadius:"10px",
         }}>
             <div className="header" style={{
@@ -55,12 +55,13 @@ const Header = () => {
                     <input onKeyDown={(e) => {
                         if (e.key === "Enter") getSearch()
                     }} onChange={(e) => setValue(e.target.value)} className="header--nav__search" style={{
-                        border:"none",
+                        border:"2px solid red",
                         outline:"none",
                         width:"150px",
                         height:"30px",
                         borderRadius:"10px",
-                        background:"darkgray"
+                        background:"0",
+                        color:"wheat"
                     }} placeholder = " movie name" type="text"/>
                     <button onClick={() => getSearch() } style={{
                         margin:"0 10px",
@@ -77,7 +78,7 @@ const Header = () => {
                         width:"90px",
                         height:"30px",
                         outline:"none",
-                        border:"none"
+                        border:"2px solid red"
                     }} onChange={(e) => handleChange(e)}>
                         <option style={{
                             background:"aqua",
