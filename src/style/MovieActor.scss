@@ -1,6 +1,9 @@
   .movie {
     overflow-x: auto;
     display: flex;
+    &::-webkit-scrollbar{
+      display: none;
+    }
     &--actor {
 
       transition: .4s;
