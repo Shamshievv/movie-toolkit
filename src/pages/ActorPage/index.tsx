@@ -21,6 +21,7 @@ const InfoPage = () => {
 
     },[])
 
+    console.log(info)
     function handleBio (text:any) {
         if (bio === 500) {
             return setBio(text.length)
@@ -46,7 +47,7 @@ const InfoPage = () => {
                                <span> Person information:</span> <br/>
                                  {info.known_for_department} <br/><br/>
                                 <span>Birthday:</span><br/>
-                                {info.birthday } ({info.birthday && 2023 - +info.birthday.slice(0,4)} years old) <br/> <br/>
+                                {info.birthday === null ? "2004-29-11": info.birthday } ({info.birthday === null ? "19" :info.birthday && 2023 - +info.birthday.slice(0,4)} years old) <br/> <br/>
                                 <span>Place of birth :</span> <br/>
                                 {info.place_of_birth} <br/><br/>
                                 <span>also_known_as:</span> <br/>
