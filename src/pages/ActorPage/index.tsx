@@ -4,8 +4,7 @@ import {useAppDispatch} from "../../Hooks/useAppDispatch";
 import {useParams} from "react-router-dom";
 import {getInfo} from "../../store/Reducers/ActionCreators";
 import ActorMovie from "../ActorMovie";
-import axios from "axios";
-import {API_KEY} from "../../API/API";
+
 import akti from "../../image/akti.jpg"
 const InfoPage = () => {
     const [bio,setBio] = useState(500)
@@ -14,7 +13,6 @@ const InfoPage = () => {
     const {movie} = useAppSelector(state => state.movieSlice)
     const {id} = useParams()
     const {language} = useAppSelector(state => state.ActorMovieSlice)
-
 
     useEffect(()=>{
         dispatch(getInfo(id))
@@ -30,7 +28,6 @@ const InfoPage = () => {
             return setBio(500)
         }
     }
-
 
     return (
         <div id="info">
@@ -49,11 +46,12 @@ const InfoPage = () => {
                                 <span>Birthday:</span><br/>
                                 {info.birthday === null ? "2004-29-11": info.birthday } ({info.birthday === null ? "19" :info.birthday && 2023 - +info.birthday.slice(0,4)} years old) <br/> <br/>
                                 <span>Place of birth :</span> <br/>
-                                {info.place_of_birth} <br/><br/>
+                                {info.place_of_birth === null ? "Batken" :info.place_of_birth} <br/><br/>
                                 <span>also_known_as:</span> <br/>
                                <span> {info.also_known_as && info.also_known_as}</span> <br/><br/>
                                 <span>Gender:</span> <br/>
                                 {info.gender === 1 ? "Woman" : "Man" }
+
                             </p>
 
                         </div>
@@ -61,7 +59,7 @@ const InfoPage = () => {
                             <h3>{info.name}</h3>
                             <p className="info--nav__bio">
                                 <span>Biography:</span> <br/> <br/>
-                                { info.biography === "" ? "No information" :info.biography && info.biography.slice(0,bio) }
+                                { info.biography === "" ? "Актилек является другом нашего главного программиста Азамата,оба друзья входят топ -4 самых богатых людей в мире,кроме этого у них имеется четверо жен" :info.biography && info.biography.slice(0,bio) }
                                 <p className="info--nav__bio--all" onClick={() => handleBio(info.biography)}>{
                                     bio === 0 ? "All view" : "All view" &&  bio === 500 ? "All view " : "Close"
                                 }</p>
