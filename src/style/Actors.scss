@@ -3,6 +3,9 @@
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
+    &::-webkit-scrollbar{
+      display: none;
+    }
     &--card{
     transition: .4s;
     cursor: pointer;

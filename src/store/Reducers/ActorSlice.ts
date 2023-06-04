@@ -29,7 +29,6 @@ export const actorSlice = createSlice({
             state.actor = []
             state.error = action.payload
         }
-
     }
 })
 export default actorSlice.reducer
