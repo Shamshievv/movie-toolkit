@@ -1,7 +1,8 @@
 #hero{
   border-bottom: 10px solid dimgray;
   width: 100%;
-  background: url("../image/Home-hero-bg.jpg") ;
+  background: url("../image/Home-hero-bg.jpg") repeat ;
+  animation: animated-hero 60s linear infinite;
   min-height: 90vh;
   box-shadow:inset 900px 0 0 400px rgba(0,0,0,0.7);
   border-radius: 0 0 10px 10px;
@@ -144,5 +145,13 @@
        top: 10%;
      }
     }
+  }
+}
+@keyframes animated-hero {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1000px 0;
   }
 }
