@@ -12,11 +12,6 @@
 a{
     text-decoration: none;
 }
-    //.container{
-    //    width: 90%;
-    //    margin: 0 auto;
-    //}
-
 .active{
     border-bottom: 3px solid red;
     border-radius: 5px;
@@ -28,22 +23,25 @@ a{
 }
 
 ::-webkit-scrollbar-track{
-    background: rgba(190, 188, 188, 0.54);
+    background: rgba(180, 47, 47, 0.8);
 }
 
 ::-webkit-scrollbar-thumb{
-    background: rgba(16, 13, 13, 0.47);;
+    background: rgba(246, 10, 10, 0.96);;
     border-radius: 20px;
 }
 p::selection{
-    background-color: cyan;
+    font-family: "Poor Richard",sans-serif;
+    background-color: rgba(255, 0, 106, 0.76);
 }
 
 h1::selection{
+    font-family: "Poor Richard",sans-serif;
     background-color: cyan;
 }
 
 span::selection{
+    font-family: "Poor Richard",sans-serif;
     background-color: cyan;
 
 }
@@ -63,4 +61,6 @@ span::selection{
 }
 body,html{
     background: rgb(15,15,32);
-    background: linear-gradient(90deg, rgba(15,15,32,1) 16%, rgba(136,112,136,0.8016456582633054) 45%, rgba(24,12,19,1) 100%, rgba(68,42,48,0.7484243697478992) 100%);}
+    background: linear-gradient(90deg, rgba(15,15,32,1) 16%, rgba(136,112,136,0.8016456582633054) 45%, rgba(24,12,19,1) 100%, rgba(68,42,48,0.7484243697478992) 100%);
+    overflow-x: hidden;
+}

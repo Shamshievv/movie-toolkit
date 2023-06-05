@@ -30,7 +30,9 @@ const Header = () => {
                 <NavLink style={{
                     color:"white",textDecoration:"none",
                     fontSize:"20px",
-                    margin:"2.5% 20px"
+                    margin:"2.5% 20px",
+                    fontFamily:"Poor Richard,san-serif",
+                    fontWeight:"500"
 
                 }} to={"/"}>
                     Home
@@ -38,7 +40,9 @@ const Header = () => {
                 <NavLink style={{
                     color:"white",textDecoration:"none",
                     fontSize:"20px",
-                    margin:"2.5% 20px"
+                    margin:"2.5% 20px",
+                    fontFamily:"Poor Richard,san-serif",
+                    fontWeight:"500"
 
                 }} to={"/topRated"}>
                     TopRated
@@ -46,7 +50,9 @@ const Header = () => {
                 <NavLink style={{
                     color:"white",textDecoration:"none",
                     fontSize:"20px",
-                    margin:"2.5% 20px"
+                    margin:"2.5% 20px",
+                    fontFamily:"Poor Richard,san-serif",
+                    fontWeight:"500"
 
                 }} to={"/popular"}>
                      Popular
@@ -65,15 +71,20 @@ const Header = () => {
                     }} placeholder = " movie name" type="text"/>
                     <button onClick={() => getSearch() } style={{
                         margin:"0 10px",
-                        background:"darkgray",
+                        background:"0",
                         width:"50px",
                         height:"30px",
                         borderRadius:"10px",
-                        border:"none"
+                        border:"2px solid red",
+                        fontFamily:"Poor Richard,san-serif",
+                        fontWeight:"500",
+                        fontSize:"15px",
+                        color:"white"
                     }}>Watch</button>
                     <select style={{
 
-                        background:"darkgrey",
+                        background:"0",
+                        color:"white",
                         borderRadius:"10px",
                         width:"90px",
                         height:"30px",
@@ -81,12 +92,12 @@ const Header = () => {
                         border:"2px solid red"
                     }} onChange={(e) => handleChange(e)}>
                         <option style={{
-                            background:"aqua",
+                            background:"0",
                             color:"black",
                             fontWeight:"800"
                         }} value="en-US">English</option>
                         <option  style={{
-                            background:"aqua",
+                            background:"0",
                             color:"black",
                             fontWeight:"800"
                         }}  value="ru-RU">Russian</option>

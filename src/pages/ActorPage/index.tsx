@@ -58,7 +58,9 @@ const InfoPage = () => {
                         <div className="info--nav">
                             <h3>{info.name}</h3>
                             <p className="info--nav__bio">
-                                <span>Biography:</span> <br/> <br/>
+                                <span style={{
+                                    fontFamily:"Poor Richard,san-serif"
+                                }}>Biography:</span> <br/> <br/>
                                 { info.biography === "" ? "Актилек является другом нашего главного программиста Азамата,оба друзья входят топ -4 самых богатых людей в мире,кроме этого у них имеется четверо жен" :info.biography && info.biography.slice(0,bio) }
                                 <p className="info--nav__bio--all" onClick={() => handleBio(info.biography)}>{
                                     bio === 0 ? "All view" : "All view" &&  bio === 500 ? "All view " : "Close"

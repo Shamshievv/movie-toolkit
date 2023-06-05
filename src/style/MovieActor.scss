@@ -27,10 +27,11 @@
       &__title {
         text-align: center;
         font-weight: 800;
-        font-family: "Source Code Pro", sans-serif;
+        font-family: "Poor Richard", sans-serif;
         transition: .4s;
         cursor: pointer;
         color: black;
+        font-size: 20px;
       }
       &__title:hover{
         transform: scale(1.03);

@@ -20,10 +20,11 @@
         border-radius: 10px;
       }
       &__name{
+        font-size: 20px;
         color: black;
         font-weight: 800;
         text-align: center;
-        font-family: "Source Code Pro",sans-serif;
+        font-family: "Poor Richard",sans-serif;
         transition:.4s;
       }
       &__name:hover{
@@ -35,7 +36,8 @@
         font-weight: 800;
         color: gray;
         transition: .4s;
-        font-family: "Source Code Pro",sans-serif;
+        font-family: "Poor Richard",sans-serif;
+        font-size: 20px;
 
       }
       &__role:hover{
