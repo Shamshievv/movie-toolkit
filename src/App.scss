@@ -26,9 +26,11 @@ a{
 ::-webkit-scrollbar{
     width: 10px;
 }
+
 ::-webkit-scrollbar-track{
     background: rgba(190, 188, 188, 0.54);
 }
+
 ::-webkit-scrollbar-thumb{
     background: rgba(16, 13, 13, 0.47);;
     border-radius: 20px;
@@ -36,9 +38,11 @@ a{
 p::selection{
     background-color: cyan;
 }
+
 h1::selection{
     background-color: cyan;
 }
+
 span::selection{
     background-color: cyan;
 
@@ -47,10 +51,7 @@ span::selection{
     background: url("https://images.wallpaperscraft.ru/image/single/kuby_struktura_chernyj_120005_1280x720.jpg") repeat;
     animation: animated-bg 60s linear infinite;
 }
-@keyframes animated-bg {
-    from { background-position: 0 0; }
-    to { background-position: 0 1000px; }
-}
+
 #popular{
     background: url("https://images.wallpaperscraft.ru/image/single/kosmicheskij_vzryv_iarkij_linii_136994_1280x720.jpg") repeat;
     animation: animated-bg 30s linear infinite;
