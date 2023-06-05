@@ -61,3 +61,6 @@ span::selection{
     from { background-position: 0 0; }
     to { background-position: 0 1000px; }
 }
+body,html{
+    background: rgb(15,15,32);
+    background: linear-gradient(90deg, rgba(15,15,32,1) 16%, rgba(136,112,136,0.8016456582633054) 45%, rgba(24,12,19,1) 100%, rgba(68,42,48,0.7484243697478992) 100%);}

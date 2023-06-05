@@ -19,7 +19,7 @@ const Details = () => {
 
     return (
         <div style={{
-            background:"black"
+            background:" linear-gradient(90deg, rgba(18,18,37,1) 16%, rgba(136,112,136,0.8016456582633054) 45%, rgba(24,12,19,1) 100%, rgba(68,42,48,0.7484243697478992) 100%)"
         }}>
         <div  style={{background:`url(https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${detail.backdrop_path}) no-repeat `, boxShadow:"inset 900px 0 0 400px rgba(0,0,0,0.7)", borderRadius:"10px", margin:"1% 0"}} id="detail">
             {

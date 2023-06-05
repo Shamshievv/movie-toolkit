@@ -3,6 +3,11 @@
   .info{
     display: flex;
     &--title{
+
+      color: white;
+      font-family: "Poor Richard",sans-serif;
+      font-weight: 500;
+      font-size: 20px;
       &__actor{
         border-radius: 10px;
       }
@@ -14,7 +19,8 @@
       width: 70%;
       margin: 0 0 0 3% ;
       &__bio{
-        font-family: "Source Code Pro",sans-serif;
+        font-family: "Poor Richard",sans-serif;
+        font-size: 30px;
         font-weight: 500;
         &--all{
           cursor: pointer;
