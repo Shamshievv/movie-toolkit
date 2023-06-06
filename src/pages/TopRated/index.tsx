@@ -54,16 +54,19 @@ const TopRated = () => {
               <div style={{display:"flex",justifyContent:"space-between",flexWrap:"wrap"}}>
                   {
                      movie.map((el)=>(
-                         <Link to={`/detail/${el.id}`}>
                              <div>
                                  <Card style={{margin:"20px 0",background:"gray"}} sx={{ maxWidth: 345 }}>
                                      <CardActionArea>
+                                         <Link to={`/detail/${el.id}`}>
+
                                          <CardMedia
                                              component="img"
                                              height="300"
                                              image={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${el.poster_path}`}
                                              alt=""
                                          />
+                                         </Link>
+
                                          <CardContent>
                                              <Typography  gutterBottom variant="h5" component="div">
                                                  {el.title}
@@ -95,7 +98,6 @@ const TopRated = () => {
                                  }
 
                              </div>
-                         </Link>
 
 
                      ))

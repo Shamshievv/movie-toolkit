@@ -164,6 +164,12 @@
   #header{
     .header{
       height: 70px;
+      &--item{
+       position: relative;
+        width: 30px;
+        height: 2px;
+        color: blue;
+      }
       a{
         display: none;
       }

@@ -4,6 +4,7 @@ import {getSearchMovie} from "../../store/Reducers/ActionCreators";
 import {useAppDispatch} from "../../Hooks/useAppDispatch";
 import {useParams} from "react-router-dom";
 import MovieCard from "../../pages/MovieCard";
+import Header, {err} from "../Header";
 
 const Search = () => {
     const {search} = useAppSelector(state => state.SearchSlice)
@@ -24,6 +25,7 @@ const Search = () => {
                         margin:"0 10px"
                     }} >
                         <MovieCard el={el}/>
+
                     </div>
                 ))
             }

@@ -55,6 +55,7 @@ span::selection{
     animation: animated-bg 30s linear infinite;
 
 }
+
 @keyframes animated-bg {
     from { background-position: 0 0; }
     to { background-position: 0 1000px; }
