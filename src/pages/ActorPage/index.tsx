@@ -4,7 +4,7 @@ import {useAppDispatch} from "../../Hooks/useAppDispatch";
 import {useParams} from "react-router-dom";
 import {getInfo} from "../../store/Reducers/ActionCreators";
 import ActorMovie from "../ActorMovie";
-
+import mom from "../../image/mom.jpg"
 import akti from "../../image/akti.jpg"
 const InfoPage = () => {
     const [bio,setBio] = useState(500)
@@ -36,7 +36,7 @@ const InfoPage = () => {
                         <div className="info--title">
                             {
                              info.profile_path ?   <img className="info--title__actor" src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${info.profile_path}`} alt=""/>
-                                : <img width={250} height={300} src={akti} alt=""/>
+                                : <img width={250} height={300} src={mom} alt=""/>
                             }
 
 
@@ -61,7 +61,7 @@ const InfoPage = () => {
                                 <span style={{
                                     fontFamily:"Poor Richard,san-serif"
                                 }}>Biography:</span> <br/> <br/>
-                                { info.biography === "" ? "Актилек является другом нашего главного программиста Азамата,оба друзья входят топ -4 самых богатых людей в мире,кроме этого у них имеется четверо жен" :info.biography && info.biography.slice(0,bio) }
+                                { info.biography === "" ? "Я родилась в Кызыл-Жоле" :info.biography && info.biography.slice(0,bio) }
                                 <p className="info--nav__bio--all" onClick={() => handleBio(info.biography)}>{
                                     bio === 0 ? "All view" : "All view" &&  bio === 500 ? "All view " : "Close"
                                 }</p>
