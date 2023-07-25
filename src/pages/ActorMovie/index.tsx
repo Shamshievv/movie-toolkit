@@ -4,7 +4,7 @@ import {useAppSelector} from "../../Hooks/useAppSelector";
 import {useAppDispatch} from "../../Hooks/useAppDispatch";
 import {getActorMovie} from "../../store/Reducers/ActionCreators";
 import {Link, useParams} from "react-router-dom";
-import akti from "../../image/akti.jpg"
+
 import mom from "../../image/mom.jpg"
 
 const ActorMovie = () => {
