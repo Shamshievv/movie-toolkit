@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {NavLink, useNavigate} from "react-router-dom";
 import {useAppDispatch} from "../../Hooks/useAppDispatch";
 import {getLanguage} from "../../store/Reducers/ActionCreators";
 
-export const err = 404
+
 const Header = () => {
     const [value, setValue] = useState("")
     const navigate = useNavigate()
@@ -12,16 +12,15 @@ const Header = () => {
     const getSearch = () => {
         if (value.trim() === "") {
             return null
+        } else if (value === "azamat") {
+            return null
         } else {
             navigate(`/search/${value}`)
-
         }
     }
 
-    // },[])
     const handleChange = (e: React.ChangeEvent<any>) => {
         dispatch(getLanguage(e.target.value))
-
     }
     return (
         <div id="header" style={{width: "100%", height: "15%", borderRadius: "10px",}}>
@@ -42,8 +41,7 @@ const Header = () => {
                     fontFamily: "Poor Richard,san-serif",
                     fontWeight: "500"
 
-                }} to={"/topRated"}>
-                    TopRated
+                }} to={"/topRated"}>TopRated
                 </NavLink>
                 <NavLink style={{
                     color: "white", textDecoration: "none",
@@ -52,9 +50,7 @@ const Header = () => {
                     fontFamily: "Poor Richard,san-serif",
                     fontWeight: "500"
 
-                }} to={"/popular"}>
-                    Popular
-                </NavLink>
+                }} to={"/popular"}>Popular</NavLink>
                 <div className="header--nav">
                     <input onKeyDown={(e) => {
                         if (e.key === "Enter") getSearch()

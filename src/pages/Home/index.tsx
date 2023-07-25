@@ -1,7 +1,7 @@
 import React from 'react';
-import tv from "../../image/second-tv.png"
-import last from  "../../image/last-bg.png"
 
+import second from "../../image/second-tv.png"
+import last from  "../../image/last-bg.png"
 const Home = () => {
     return (
        <div style={{
@@ -30,7 +30,7 @@ const Home = () => {
                          <p>Смотрите на Smart TV, PlayStation, Xbox,<br/> Chromecast, Apple TV, плеерах Blu-ray и других <br/>устройствах.</p>
                      </div>
                       <div className="second--tv">
-                          <img className="second--tv__image" src={tv} alt="img"/>
+                          <img className="second--tv__image" src={second} alt="img"/>
                           <div className="second--tv__video">
                               <video  autoPlay playsInline muted loop>
                                   <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v" type="video/mp4"/>
