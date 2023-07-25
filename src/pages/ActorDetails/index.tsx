@@ -3,9 +3,7 @@ import {useAppSelector} from "../../Hooks/useAppSelector";
 import {useAppDispatch} from "../../Hooks/useAppDispatch";
 import {Link, useParams} from "react-router-dom";
 import {getActors} from "../../store/Reducers/ActionCreators";
-
-import akti from "../../image/akti.jpg"
-import mom from "../../image/mom.jpg"
+import user from "../../image/user.png"
 const Actors = () => {
     const {actor,loader,error} = useAppSelector(state => state.actorSlice)
     const dispatch = useAppDispatch()
@@ -25,7 +23,7 @@ const Actors = () => {
                             <Link to={`/actors/${el.id}`} className="actors--card">
                                 {
                                 el.profile_path ? <img src={`https://www.themoviedb.org/t/p/w138_and_h175_face/${ el.profile_path}`} alt=""/>
-                                    : <img className="actors--card__user" src={mom} alt=""/>
+                                    : <img className="actors--card__user" src={user} alt=""/>
 
                                 }
                                 <p className="actors--card__name">{el.original_name}</p>

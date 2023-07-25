@@ -4,9 +4,7 @@ import {useAppDispatch} from "../../Hooks/useAppDispatch";
 import {useParams} from "react-router-dom";
 import {getInfo} from "../../store/Reducers/ActionCreators";
 import ActorMovie from "../ActorMovie";
-
-import akti from "../../image/akti.jpg"
-import mom from "../../image/mom.jpg"
+import user from "../../image/user.png"
 const InfoPage = () => {
     const [bio,setBio] = useState(500)
     const {info,loader,error} = useAppSelector(state => state.infoSlice)
@@ -37,7 +35,7 @@ const InfoPage = () => {
                         <div className="info--title">
                             {
                              info.profile_path ?   <img className="info--title__actor" src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${info.profile_path}`} alt=""/>
-                                : <img width={250} height={300} src={mom} alt=""/>
+                                : <img width={250} height={300} src={user} alt=""/>
                             }
 
 
@@ -45,7 +43,7 @@ const InfoPage = () => {
                                <span> Person information:</span> <br/>
                                  {info.known_for_department} <br/><br/>
                                 <span>Birthday:</span><br/>
-                                {info.birthday === null ? "2004-29-11": info.birthday } ({info.birthday === null ? "19" :info.birthday && 2023 - +info.birthday.slice(0,4)} years old) <br/> <br/>
+                                {info.birthday === null ? "2006-13-02": info.birthday } ({info.birthday === null ? "17" :info.birthday && 2023 - +info.birthday.slice(0,4)} years old) <br/> <br/>
                                 <span>Place of birth :</span> <br/>
                                 {info.place_of_birth === null ? "Batken" :info.place_of_birth} <br/><br/>
                                 <span>also_known_as:</span> <br/>
