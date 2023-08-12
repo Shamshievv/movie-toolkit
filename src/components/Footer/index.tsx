@@ -19,7 +19,7 @@ const Footer = () => {
                         <div className="footer--title__icons">
                           <div>
                               <p>Me at WebSites</p>
-                              <Link className="footer--title__icons--insta" to="https://www.instagram.com/1llaza/">
+                              <Link className="footer--title__icons--insta" to="https://instagram.com/aza.user?igshid=OGQ5ZDc2ODk2ZA==">
                                   <BsInstagram/>
                               </Link>
                               <Link className="footer--title__icons--github" to={"https://www.github.com/shamshievv"}>
