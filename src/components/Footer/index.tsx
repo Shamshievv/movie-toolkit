@@ -19,8 +19,8 @@ const Footer = () => {
                         <div className="footer--title__icons">
                           <div>
                               <p>Me at WebSites</p>
-                              <Link className="footer--title__icons--insta" to="https://instagram.com/aza.user?igshid=OGQ5ZDc2ODk2ZA==">
-                                  <BsInstagram/>
+                              <Link  className="footer--title__icons--insta" to="https://www.instagram.com/shamshievv.a/?igshid=OGQ5ZDc2ODk2ZA%3D%3D" >
+                                  <BsInstagram />
                               </Link>
                               <Link className="footer--title__icons--github" to={"https://www.github.com/shamshievv"}>
                                   <BsGithub/>
@@ -35,11 +35,8 @@ const Footer = () => {
                                   <BsTelegram/>
                               </Link>
                           </div>
-
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
