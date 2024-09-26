@@ -10,7 +10,6 @@ const Popular = () => {
     const dispatch = useAppDispatch()
     const {language} = useAppSelector(state => state.ActorMovieSlice)
 
-    console.log(movie)
     return (
        <div id="popular">
            <div className="container">

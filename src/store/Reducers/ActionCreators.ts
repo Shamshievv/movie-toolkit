@@ -25,6 +25,7 @@ export const getPopular = (page:number,language:any) => {
        }
    }
 }
+
 export const getTopRated = (page:number,language : any) => {
    return async (dispatch:AppDispatch) => {
        try {
@@ -50,6 +51,7 @@ export const getDetails = (id:any,language:any) => {
         }
     }
 }
+
 export const getActors = (id:any) => {
     return async(dispatch:AppDispatch) => {
         try {
@@ -62,6 +64,7 @@ export const getActors = (id:any) => {
         }
     }
 }
+
 export const getInfo = (id:any) => {
     return async(dispatch:AppDispatch) => {
         try {
@@ -74,6 +77,7 @@ export const getInfo = (id:any) => {
         }
     }
 }
+
 export const getActorMovie = (id:any) => {
     return async(dispatch:AppDispatch) => {
         try {
@@ -86,6 +90,7 @@ export const getActorMovie = (id:any) => {
         }
     }
 }
+
 export const getSearchMovie = (movieName:any) => {
     return async(dispatch:AppDispatch) => {
         try {
