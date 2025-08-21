@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Popular from "./pages/Popular";
-import Header from "./components/Header";
+import Header from"./components/Header";
 import {Route, Routes} from "react-router-dom";
 import TopRated from "./pages/TopRated";
 import Details from "./pages/DetailPage";
