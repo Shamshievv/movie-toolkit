@@ -31,7 +31,7 @@ const Footer = () => {
                               <Link className="footer--title__icons--whatsapp"  to={"https://wa.me/+996701070383"}>
                                   <BsWhatsapp/>
                               </Link>
-                              <Link className="footer--title__icons--telegram"  to={"https://t.me/+996220340337"}>
+                              <Link className="footer--title__icons--telegram"  to={"https://t.me/+996701070383"}>
                                   <BsTelegram/>
                               </Link>
                           </div>
